@@ -6,7 +6,7 @@ This is an example project to create jenkins pipelines (script and scm) with the
 
 ## Project structure
 
-Under root directory, there is a Maven 'hello world' project. In direcotry `jobs`, you will find 2 jobs defination to build this Maven project.
+Under root directory, there is a Maven 'hello world' project. In directory `jobs`, you will find 2 jobs definition to build this Maven project.
 
 * pipeline-scm.groovy
 
@@ -16,4 +16,6 @@ Under root directory, there is a Maven 'hello world' project. In direcotry `jobs
 
   Jenkins pipeline through build script inline.
 
-## Test
+* github-organization.groovy
+  
+  A github organization job based on [github branch source plugin](https://plugins.jenkins.io/github-branch-source/). This job will scan all repositories under a github organization/personal account, and create jenkins multibranch pipeline projects if a 'Jenkinsfile' is present in the repository.
